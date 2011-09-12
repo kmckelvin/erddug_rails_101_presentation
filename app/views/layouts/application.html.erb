@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Links</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="flash">
+    <% if flash[:notice].present? %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+
+    <% if flash[:error].present? %>
+      <div class="error"><%= flash[:error] %></div>
+    <% end %>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>

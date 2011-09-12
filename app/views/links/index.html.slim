@@ -1,0 +1,8 @@
+p = link_to "New Link", new_link_path
+- @links.each do |link|
+  div class="link"
+    div class="title" = link_to link.title, link.url, :target => "_blank"
+    div class="description" = link.description
+    div class="manage"
+      = link_to "Delete", link, :method => :delete, :confirm => 'Are you sure?'
+= paginate @links
